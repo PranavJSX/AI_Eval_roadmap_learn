@@ -1,24 +1,24 @@
-# The Repo contains the complete learning roadmap for AI Eval Engineer/AI System Engineer
+# The repo contains the complete learning roadmap for AI Eval Engineer / AI System Engineer
 
-### We will start with getting grip on Python.
+### We will start by getting a grip on Python.
 
-- If You are a beginner please learn python basic snytax first.
-- Then we move to python libraries like, Asnycio, httpx
-- Next is OOPS in python, data abstraction, implementing different types of polymorphisms.
-- Numpys, Pandas , dictionaries, lists, tupples - all these data structures have to be prepared
-- Tree graphs for ai related work tasks
+- If you are a beginner, please learn Python basic syntax first.
+- Then we move to Python libraries like asyncio and httpx.
+- Next is OOP in Python, data abstraction, and implementing different types of polymorphism.
+- Numpys, Pandas, dictionaries, lists, tupples — all these data structures should be prepared.
+- Tree graphs for AI-related work tasks.
 
-### Understanding required python libraries
+### Understanding required Python libraries
 
-- Building projects with Pytest to understand python automation libraries
-- Learning AI metrics, Pydantic and structured data outputs
+- Build projects with Pytest to understand Python automation libraries.
+- Learn AI metrics, Pydantic, and structured data outputs.
 
-### Learning AI and Agentic AI
+### Learning AI and agentic AI
 
-- Understand how ai systems work, how ai pipelines work and LLM's are built, because you can't evaluate something you don't understand.
-- Build expertise in RAG evalutation metrics (Faithfullness, context, Recall, Semantic Drift )
+- Understand how AI systems work, how AI pipelines work, and how LLMs are built, because you can't evaluate something you don't understand.
+- Build expertise in RAG evaluation metrics (faithfulness, context, recall, semantic drift).
 
-### Our Core tools and frameworks we need to master
+### Our core tools and frameworks we need to master
 
-- Ragas and Deepeval are the 2 tools you have to master, not learn but Master.
-- Built atleast 1 production ready AI eval pipeline, should be end to end completely
+- Ragas and Deepeval are the two tools you have to master, not just learn.
+- Build at least one production-ready AI eval pipeline; it should be end-to-end complete.
