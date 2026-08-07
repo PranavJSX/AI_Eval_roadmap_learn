@@ -1,0 +1,38 @@
+# ==========================================
+# Virtual Environments & Packages
+# ==========================================
+# Ignores .venv at any depth (e.g. inside _python_fundamentals/.venv)
+**/.venv/
+**/.venv
+**/venv/
+**/env/
+**/pyvenv.cfg
+
+# ==========================================
+# Python Bytecode & Cache Files
+# ==========================================
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# AI / Data Science / Notebook Caches
+# ==========================================
+.ipynb_checkpoints/
+*.log
+*.sqlite3
+
+# ==========================================
+# IDEs & System Files
+# ==========================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
