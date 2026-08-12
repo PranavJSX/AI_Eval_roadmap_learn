@@ -3,8 +3,11 @@
 ### We will start by getting a grip on Python.
 
 - If you are a beginner, please learn Python basic syntax first.
-- Then we move to Python libraries like asyncio and httpx.
-- Next is OOP in Python, data abstraction, and implementing different types of polymorphism.
+- Data structures in python
+- Dictionaries and list operations are very important
+- OOPS in python, pydnatics.
+- Pytest and architecture
+- First synchronous apis then asyncio and httpx.
 - Numpys, Pandas, dictionaries, lists, tupples — all these data structures should be prepared.
 - Tree graphs for AI-related work tasks.
 

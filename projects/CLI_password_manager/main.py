@@ -50,9 +50,7 @@ def main():
             print("HAVE A GOOD DAY")
             break
         else:
-            print("INVALID !! PLEASE CHOOSE OF THE VALID OPTIONS")
-
+             print("INVALID !! PLEASE CHOOSE ONE OF THE VALID OPTIONS")
+             
 if __name__=="__main__":
     main()
-
-    
