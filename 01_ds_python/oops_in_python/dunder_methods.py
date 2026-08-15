@@ -40,6 +40,23 @@ class Factorial():
             print(self._cache)
         return self._cache[number]
 
+class Stack():
+
+    def __contains__(self, item):
+        for current_item in self.items:
+            if item == current_item:
+                return True
+            else:
+                return False
+
+    def __getitem__(self, index):
+        return self.items[index]
+
+    def __len__(self):
+        return len(self.items)
+
+    def __reversed__(self):
+        return type(self)(reversed(self.items))
 
 def main():
     jane = Person('Jane willie', 25)
