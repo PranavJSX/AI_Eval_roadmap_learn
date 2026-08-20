@@ -1,3 +1,4 @@
+from decorators import do_twice
 def parent(num):
 
     print("Executing parent function")
@@ -24,9 +25,13 @@ def decorator1(func):
     return wrapper
 
 #using pie syntax to use decorator
-@decorator1
+@do_twice
 def say_whee():
     print("WHEEE!!")
+
+@do_twice
+def call_by_name(name):
+    print(f"Hello {name}")
 
 
 
@@ -40,7 +45,8 @@ def main():
     # print(first())
     # print(second())=
 
-    print(say_whee())
+    say_whee()
+    call_by_name('Pranav')
 
 if __name__=="__main__":
     main()
