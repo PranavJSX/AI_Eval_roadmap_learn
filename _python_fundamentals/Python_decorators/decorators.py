@@ -19,3 +19,22 @@ def timing(func):
         print(f"Finished {func.__name__}() in {run_time:.4f} secs")
         return value
     return wrapper_timer
+
+def debugger(func):
+    @functools.wraps(func)
+    def wrapper_debugger(*args,**kwargs):
+        args_repr = [repr(a) for a in args]
+        kwargs_repr = [f"{k} = {repr(v)}" for k,v in kwargs.items()]
+        signature = ", ".join(args_repr + kwargs_repr)
+        print(f"Calling {func.__name__} ({signature})")
+        value = func(*args,**kwargs)
+        print(f"Calling {func.__name__} () returned {repr(value)}")
+        return value
+    return wrapper_debugger 
+
+def slow_down(func):
+    functools.wraps(func)
+    def wrapper_slow_down(*args,**kwargs):
+        time.sleep(1)
+        return func(*args,**kwargs)
+    return wrapper_slow_down
