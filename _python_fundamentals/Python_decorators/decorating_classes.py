@@ -1,5 +1,6 @@
 from decorators import *
 
+
 class Circle:
     def __init__(self, radius):
         self.radius = radius
@@ -36,15 +37,16 @@ class Circle:
         """Value of π, could use math.pi instead though"""
         return 3.1415926535
 
+
 @timing
 class TimeWaster:
     @debugger
-    def __init__(self,max_num):
+    def __init__(self, max_num):
         self.max_num = max_num
         print("called constructor")
 
     @timing
-    def waste_time(self,num_times):
+    def waste_time(self, num_times):
         for _ in range(num_times):
             sum([number**2 for number in range(self.max_num)])
             # print("ran waste_time")
@@ -54,6 +56,7 @@ def main():
     tw = TimeWaster(1000)
 
     tw.waste_time(99)
+
 
 if __name__ == "__main__":
     main()

@@ -9,6 +9,7 @@ class Person:
     def __repr__(self):
         return f"{type(self).__name__} (name = '{self.name}', age = '{self.age}')"
 
+
 # Operator overloading
 class Storage(float):
     def __new__(cls, value, unit):
@@ -23,24 +24,23 @@ class Storage(float):
                 f"'{type(self).__name__}' and '{type(other).__name__}'"
             )
         if not self.unit == other.unit:
-            raise TypeError(
-                f"incompatible units: '{self.unit}' and '{other.unit}'"
-            )
+            raise TypeError(f"incompatible units: '{self.unit}' and '{other.unit}'")
 
         return type(self)(super().__add__(other), self.unit)
 
 
-class Factorial():
+class Factorial:
     def __init__(self):
-        self._cache = {0:1, 1:1}
+        self._cache = {0: 1, 1: 1}
 
     def __call__(self, number):
         if number not in self._cache:
-            self._cache[number] = number * self(number-1)
+            self._cache[number] = number * self(number - 1)
             print(self._cache)
         return self._cache[number]
 
-class Stack():
+
+class Stack:
 
     def __contains__(self, item):
         for current_item in self.items:
@@ -58,17 +58,18 @@ class Stack():
     def __reversed__(self):
         return type(self)(reversed(self.items))
 
+
 def main():
-    jane = Person('Jane willie', 25)
+    jane = Person("Jane willie", 25)
     # str(jane)
     # print(jane)
     # print(str(jane))
     # print(repr(jane))
 
     # Creating objects for storage class
-    disk_1 = Storage(500, 'GB')
-    disk_2 = Storage(1000, 'GB')
-    disk_3 = Storage(1, 'TB')
+    disk_1 = Storage(500, "GB")
+    disk_2 = Storage(1000, "GB")
+    disk_3 = Storage(1, "TB")
 
     # print(disk_1+disk_2)
 
@@ -78,7 +79,6 @@ def main():
     res = factorial_of(5)
     print(res)
 
-if __name__== "__main__":
+
+if __name__ == "__main__":
     main()
-
-

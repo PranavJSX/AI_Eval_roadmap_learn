@@ -5,8 +5,9 @@ from functions import (
     list_services,
     delete_credential,
     load_or_generate_key,
-    load_vault
+    load_vault,
 )
+
 
 def main():
 
@@ -14,7 +15,9 @@ def main():
     vault = load_vault()
 
     while True:
-        print("--------------MY PASSWORD MANAGER !! PLEASE CHOOSE ONE OF THE BELOW OPTIONS--------------")
+        print(
+            "--------------MY PASSWORD MANAGER !! PLEASE CHOOSE ONE OF THE BELOW OPTIONS--------------"
+        )
         print("1--------------ADD CREDENTIAL")
         print("2--------------GET CREDENTIAL")
         print("3-----------UPDATE CREDENTIAL")
@@ -23,12 +26,18 @@ def main():
         print("6------------ALL DONE EXIT !!")
 
         choice = input("OPTION SELECT :").strip()
-        
+
         if choice == "1":
             service = input("---ENTER SERVICE---").strip().lower()
             username = input("---ENTER USERNAME---").strip()
             password = input("---ENTER PASSWORD---").strip()
-            add_credential(vault=vault, cipher=cipher, service=service,username=username, password=password)
+            add_credential(
+                vault=vault,
+                cipher=cipher,
+                service=service,
+                username=username,
+                password=password,
+            )
 
         elif choice == "2":
             service = input("---ENTER SERVICE---").strip().lower()
@@ -37,7 +46,9 @@ def main():
         elif choice == "3":
             service = input("---ENTER SERVICE---").strip().lower()
             password = input("---UPDATED PASSWORD---").strip()
-            update_password(vault=vault, cipher=cipher, service=service, new_password=password)
+            update_password(
+                vault=vault, cipher=cipher, service=service, new_password=password
+            )
 
         elif choice == "4":
             service = input("---ENTER SERVICE---").strip().lower()
@@ -50,7 +61,8 @@ def main():
             print("HAVE A GOOD DAY")
             break
         else:
-             print("INVALID !! PLEASE CHOOSE ONE OF THE VALID OPTIONS")
-             
-if __name__=="__main__":
+            print("INVALID !! PLEASE CHOOSE ONE OF THE VALID OPTIONS")
+
+
+if __name__ == "__main__":
     main()

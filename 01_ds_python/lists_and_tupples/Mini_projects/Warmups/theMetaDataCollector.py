@@ -16,6 +16,7 @@ Print name, skills, and location to confirm it unpacked correctly."""
 def main():
     user_data = ["Alex", "Dev", "Python", "SQL", "Git", "Docker", "USA"]
     name, *skills, location = user_data
-    print(f"name: {name}, Skills: {skills}, Location: {location}")  
+    print(f"name: {name}, Skills: {skills}, Location: {location}")
+
 
 main()

@@ -8,16 +8,16 @@ class Book:
     def checkout(self):
         if self.is_available:
             self.is_available = False
-            return 'Success'
+            return "Success"
         else:
-            return 'Unfortunately this books is not available at the moment!'
+            return "Unfortunately this books is not available at the moment!"
 
     def return_book(self):
         if not self.is_available:
             self.is_available = True
-            return 'Success'
+            return "Success"
         else:
-            return 'Error !'
+            return "Error !"
 
     def get_details(self):
         if self.is_available:
@@ -26,11 +26,11 @@ class Book:
             return f"{self.title} Book written by {self.author} is not available."
 
     def calculate_late_fee(self, days_late):
-        return days_late* 1
+        return days_late * 1
 
 
 class Ebook(Book):
-    def __init__(self, title, author, isbn, file_size_mb, is_available = True):
+    def __init__(self, title, author, isbn, file_size_mb, is_available=True):
         super().__init__(title, author, isbn, is_available)
         self.file_size_mb = file_size_mb
 
@@ -40,11 +40,12 @@ class Ebook(Book):
         else:
             return f"{self.title} E Book with file size {self.file_size_mb} and author {self.author} is not available"
 
-    def calculate_late_fee(self,days_late):
-        return days_late* 0.5
+    def calculate_late_fee(self, days_late):
+        return days_late * 0.5
+
 
 class AudioBook(Book):
-    def __init__(self, title, author, isbn, duration_hours, is_available = True):
+    def __init__(self, title, author, isbn, duration_hours, is_available=True):
         super().__init__(title, author, isbn, is_available)
         self.duration_hours = duration_hours
 
@@ -55,7 +56,8 @@ class AudioBook(Book):
             return f"{self.title} Audio Book with total duration {self.duration_hours} and author {self.author} is not available"
 
     def calculate_late_fee(self, days_left):
-        return days_left* 0.75
+        return days_left * 0.75
+
 
 class Library:
     def __init__(self):
@@ -87,12 +89,3 @@ class Library:
         if book:
             return book.return_book()
         return "Error! Book not found in library."
-    
-
-    
-
-
-
-
-
-    

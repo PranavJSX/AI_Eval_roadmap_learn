@@ -1,5 +1,6 @@
 from classes_scaffolding import Library, Book, AudioBook, Ebook
 
+
 def main():
     print("---------------WELCOME TO YOUR LIBRARY---------------")
     my_library = Library()
@@ -11,17 +12,17 @@ def main():
     )
 
     ebook1 = Ebook(
-        title="Fluent Python", 
-        author="Luciano Ramalho", 
-        isbn="978-1491946008", 
-        file_size_mb=15.2
+        title="Fluent Python",
+        author="Luciano Ramalho",
+        isbn="978-1491946008",
+        file_size_mb=15.2,
     )
-    
+
     audio1 = AudioBook(
-        title="Atomic Habits", 
-        author="James Clear", 
-        isbn="978-0735211292", 
-        duration_hours=5.5
+        title="Atomic Habits",
+        author="James Clear",
+        isbn="978-0735211292",
+        duration_hours=5.5,
     )
 
     # 3. Add books to the library
@@ -47,9 +48,15 @@ def main():
     # 7. Demonstrate Polymorphic Late Fees
     print("\n--- 💸 CALCULATING 5-DAY LATE FEES ---")
     days_late = 5
-    print(f"• Physical Book ('{book1.title}'): ${book1.calculate_late_fee(days_late):.2f}")
-    print(f"• E-Book ('{ebook1.title}'):        ${ebook1.calculate_late_fee(days_late):.2f}")
-    print(f"• Audio Book ('{audio1.title}'):    ${audio1.calculate_late_fee(days_late):.2f}")
+    print(
+        f"• Physical Book ('{book1.title}'): ${book1.calculate_late_fee(days_late):.2f}"
+    )
+    print(
+        f"• E-Book ('{ebook1.title}'):        ${ebook1.calculate_late_fee(days_late):.2f}"
+    )
+    print(
+        f"• Audio Book ('{audio1.title}'):    ${audio1.calculate_late_fee(days_late):.2f}"
+    )
 
     # 8. Return the book
     print("\n--- 🔄 RETURNING 'Fluent Python' ---")
@@ -59,6 +66,7 @@ def main():
     print("\n==========================================")
     print("   ✅ ALL OOP TESTS PASSED SUCCESSFULLY!  ")
     print("==========================================")
+
 
 if __name__ == "__main__":
     main()

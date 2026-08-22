@@ -1,15 +1,14 @@
-
 class Employee:
     companyName = "Technologies"
-    def __init__(self,name, empId, age):
 
-        #Below are all instance attributes
+    def __init__(self, name, empId, age):
+
+        # Below are all instance attributes
 
         self.name = name
         self.empId = empId
         self.age = age
 
-    
 
 class Dog:
     species = "Canis familiaris"
@@ -29,15 +28,18 @@ class Dog:
     def __str__(self):
         return f" Dog Name : {self.name} and age is {self.age}"
 
+
 class GermanShepherd(Dog):
     def __init__(self, name, age):
         super().__init__(name, age)
-        self.speak = 'WOOF !!'
+        self.speak = "WOOF !!"
 
 
 def main():
     obj1 = Employee("Pranav Ojha", 141336, 26)
-    print(f"Employee Name: {obj1.name}, Employee Id: {obj1.empId}, Employee age: {obj1.age}")
+    print(
+        f"Employee Name: {obj1.name}, Employee Id: {obj1.empId}, Employee age: {obj1.age}"
+    )
     print(Employee.companyName)
 
     dogMolly = Dog("Molly", 6)
@@ -47,5 +49,6 @@ def main():
     print(germanShepherd1)
     print(germanShepherd1.speak)
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()

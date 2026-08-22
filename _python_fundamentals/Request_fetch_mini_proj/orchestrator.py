@@ -3,6 +3,7 @@ from typing import List, Dict, Any
 from client import APIClient
 from config import settings
 
+
 class BatchProcessor:
     def __init__(self, api_client, APIClient):
         self.api_client = api_client
@@ -19,5 +20,3 @@ class BatchProcessor:
         tasks = [self._fetch_worker(i) for i in item_ids]
         results = await asyncio.gather(*tasks, return_exceptions=True)
         return [r for r in results if isinstance(r, dict)]
-
-    

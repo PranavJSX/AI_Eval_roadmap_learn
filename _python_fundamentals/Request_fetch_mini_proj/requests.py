@@ -1,5 +1,6 @@
 import httpx
 
+
 def fetch_data(url):
     """
     Fetch data from the given URL using an HTTP GET request.
@@ -21,5 +22,5 @@ def fetch_data(url):
         print(f"HTTP error occurred: {e.response.status_code} - {e.response.text}")
     except ValueError:
         print("Response content is not valid JSON.")
-    
+
     return None
