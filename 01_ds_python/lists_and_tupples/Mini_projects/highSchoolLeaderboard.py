@@ -32,16 +32,17 @@ scores = [
     ("Liam", 820),
     ("Sophia", 610),
     ("Jackson", 950),
-    ("Ethan", 730)
+    ("Ethan", 730),
 ]
 
 
 def main():
-    scores.sort(key= lambda score:score[1], reverse=True)
+    scores.sort(key=lambda score: score[1], reverse=True)
     print(scores)
     gold, silver, bronze = scores[:3]
     print(f"Gold Medal: {gold[0]} with {gold[1]} points!")
     print(f"Silver Medal: {silver[0]} with {silver[1]} points!")
-    print(f"Bronze Medal: {bronze[0]} with {bronze[1]} points!")    
+    print(f"Bronze Medal: {bronze[0]} with {bronze[1]} points!")
+
 
 main()

@@ -12,12 +12,14 @@ Reverse that sliced sub-list using step slicing ([::-1]).
 
 Print both the original list and the reversed sub-list."""
 
+
 def main():
-    mylist = [i for i in range(1,10)]
+    mylist = [i for i in range(1, 10)]
     slicedList = mylist[2:8]
     reversedList = slicedList[::-1]
 
     print("Original ", slicedList)
-    print("Reversed ",reversedList)
+    print("Reversed ", reversedList)
+
 
 main()

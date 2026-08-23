@@ -1,6 +1,7 @@
 import httpx
 from typing import Any, Dict
 
+
 class APIClient:
     def __init__(self, client: httpx.AsyncClient):
         self.client = client
@@ -15,5 +16,4 @@ class APIClient:
             raise
         except httpx.RequestError as exc:
             print(f"[ERROR] An error occurred while requesting {exc.request.url!r}.")
-            raise   
-
+            raise
