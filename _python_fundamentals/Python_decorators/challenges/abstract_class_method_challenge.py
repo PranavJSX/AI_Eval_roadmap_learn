@@ -1,4 +1,4 @@
-'''🎯 Challenge: The BaseGuardrail Contract
+"""🎯 Challenge: The BaseGuardrail Contract
 In AI safety systems, guardrail modules check whether input prompts or output responses satisfy safety rules (like PII masking, toxicity checks, or topic compliance).
 
 You need to implement a concrete LengthGuardrail class that enforces an Abstract Base Class interface.
@@ -14,10 +14,10 @@ Implement the mandatory abstract method validate(self, text: str) -> bool:
 
 Check if len(text) is less than or equal to self.max_length.
 
-Return True if it passes, False if it exceeds max_length.'''
-
+Return True if it passes, False if it exceeds max_length."""
 
 from abc import ABC, abstractmethod
+
 
 # 1. THE ABSTRACT CONTRACT
 class BaseGuardrail(ABC):
@@ -41,7 +41,7 @@ class LengthGuardrail(BaseGuardrail):
     # TODO 1: Implement the @property 'rule_name'
     @property
     def rule_name(self):
-        return 'Length limit check'
+        return "Length limit check"
 
     # TODO 2: Implement the 'validate' method
     def validate(self, text) -> bool:

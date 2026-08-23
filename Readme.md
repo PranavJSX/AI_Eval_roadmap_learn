@@ -25,3 +25,19 @@
 
 - Ragas and Deepeval are the two tools you have to master, not just learn.
 - Build at least one production-ready AI eval pipeline; it should be end-to-end complete.
+
+## Week 1
+
+### Topics covered
+
+- Dictonaries and lists
+- String functions and related functions
+
+## Week 2
+
+### Topics Covered
+
+- Decorators
+- Pydantic Syntax
+- Abstract and class menthods
+- Pytest
