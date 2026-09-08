@@ -41,3 +41,8 @@
 - Pydantic Syntax
 - Abstract and class menthods
 - Pytest
+
+## Week 3
+
+- FAST API
+- Pytorch
