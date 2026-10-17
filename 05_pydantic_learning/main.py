@@ -3,7 +3,8 @@ from typing import Annotated, Self
 from datetime import date 
 from uuid import UUID, uuid4
 from enum import Enum
-from pydantic import BaseModel, EmailStr, Field, field_validator, model_validator, PositiveFloat, validate_call
+from pydantic import BaseModel, EmailStr, Field, field_validator, model_validator, PositiveFloat, validate_call, HttpUrl
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Department(Enum):
@@ -114,6 +115,26 @@ email_str = send_invoice(
 )
 
 print(email_str)
+
+# Lets try to learn the usage of pydantic manage settings, it is used to hanlde env variables and env configurations settings
+class AppConfig(BaseSettings):
+    database_host: HttpUrl
+    database_user: str = Field(min_lengt=5)
+    database_password: str = Field(min_lengthh=10)
+    api_key: str = Field(min_length=20)
+
+class AppConfig(BaseSettings):
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        case_sensitive=True,
+        extra="forbit",
+    )
+
+    database_host = HttpUrl
+    database_user: str = Field(min_length=5)
+    database_password:str = Field(min_length=10)
+    api_key:str = Field(min_length=20)  
 
 
 if __name__ == "__main__":
