@@ -1,0 +1,17 @@
+[
+    {
+        "query": "Give me the sum of 5+4",
+        "app_response": "The sum of 5 + 4 is 9",
+        "expected_keyword": "sum"
+    },
+    {
+        "query": "Current rainy days",
+        "app_response": "There are 3 rainy days this week",
+        "expected_keyword": "rain"
+    },
+    {
+        "query": "Give me the product of 2 and 5",
+        "app_response": "The product of 2 and 5 is 10",
+        "expected_keyword": "product"
+    }
+]
