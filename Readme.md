@@ -45,4 +45,8 @@
 ## Week 3
 
 - FAST API
-- Pytorch
+- Completiong an pytest script including pydantic and asyncio
+
+## Week 4 (Actual projects building)
+
+- A basic RAG application
