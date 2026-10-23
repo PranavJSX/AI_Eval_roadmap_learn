@@ -24,4 +24,5 @@ def test_get_single_post(api_client, post_id):
 def test_delete_request(api_client, sample_post_payload):
     response = api_client.delete(f"/posts/{sample_post_payload['id']}")
     assert response.status_code == 200
+
     
