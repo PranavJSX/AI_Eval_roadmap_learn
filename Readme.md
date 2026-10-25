@@ -41,3 +41,12 @@
 - Pydantic Syntax
 - Abstract and class menthods
 - Pytest
+
+## Week 3
+
+- FAST API
+- Completiong an pytest script including pydantic and asyncio
+
+## Week 4 (Actual projects building)
+
+- A basic RAG application
